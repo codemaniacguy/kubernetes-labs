@@ -3,12 +3,11 @@ kind: Pod
 metadata:
   name: nodehelloworld.example.com
   labels:
-    app: helloworld
+    app: hellopython
 spec:
   containers:
   - name: k8s-demo
-    image: codemaniacguy
-mypython-image
+    image: codemaniacguy/mypython-image
     ports:
     - name: python-port
       containerPort: 3000
