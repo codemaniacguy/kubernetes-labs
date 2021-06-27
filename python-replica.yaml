@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: python-controller
+  labels:
+    app: hellopython
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: hellopython
+  template:
+    metadata:
+      labels:
+        app: hellopython
+    spec:
+      containers:
+      - name: pythondemo
+        image: codemaniacguy/mypython-image
+        ports:
+        - name: python-port
+          containerPort: 3000
