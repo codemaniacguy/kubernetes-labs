@@ -1,14 +1,12 @@
 apiVersion: v1
 kind: Service
-metadta:
+metadata:
   name: helloworld-service
 spec:
   ports:
   - port: 31001
     targetPort: nodejs-port
-    #From Hello-World Yaml
     protocol: TCP
   selector:
     app: helloworld
   type: NodePort
-  
