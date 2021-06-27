@@ -4,18 +4,19 @@ metadata:
   name: helloworld-controller
   labels:
     app: helloworld
-  spec:
-    replicas: 4
-    selector:
-      matchlabels:
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: helloworld
+  template:
+    metadata:
+      labels:
         app: helloworld
-    template:
-      metadata:
-        app:  helloworld
-      spec:
-        containers:
-        - name: k8s-demo
-          image: arjunachari12/k8s-demo
-          ports:
-          - name: nodejs-port
-            containerPort: 3000
+    spec:
+      containers:
+      - name: k8s-demo
+        image: arjunachari12/k8s-demo
+        ports:
+        - name: nodejs-port
+          containerPort: 3000
