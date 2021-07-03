@@ -9,4 +9,4 @@ spec:
     protocol: TCP
   selector:
     app: redisservice
-  type: RedisPort
+  type: LoadBalancer
