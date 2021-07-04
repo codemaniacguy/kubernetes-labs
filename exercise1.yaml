@@ -5,9 +5,9 @@ metaData:
   labels:
     app: frontend
 spec:
-  container:
+  containers:
   - name: nginx
     image: nginx1909
     ports:
     name: nodejs-port
-    containerPort: 0
+    - containerPort: 0
