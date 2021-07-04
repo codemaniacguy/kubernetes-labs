@@ -4,7 +4,7 @@ metadata:
 spec:
   port:
   port: 80
-    targetPort: nodejs-ports
+    targetPort: nodejs-port
     protocol: TCP
   selectors:
     app: myapp
